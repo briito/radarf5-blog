@@ -4,8 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  site: 'https://radarf5.com',
+  site: 'https://blog.radarf5.com',
   output: 'server',
   adapter: vercel(),
-  integrations: [sitemap()],
+  integrations: [sitemap({ filter: (page) => !page.endsWith("/404/") && !page.includes("/api/") })],
 });

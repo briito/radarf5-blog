@@ -12,13 +12,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <p>
       Tem alguma dúvida sobre nosso conteúdo, sugestão de pauta, encontrou
       alguma informação que precisa ser corrigida ou deseja falar sobre uma
-      possível parceria ? Entre em contato com nossa equipe.
+      possível parceria? Entre em contato com nossa equipe.
     </p>
 
     <div class="callout-box">
       <p>
-        <strong>E-mail:</strong> radarf5main@gmail.com
+        <strong>E-mail:</strong> <a href="mailto:contato@radarf5.com">contato@radarf5.com</a>
       </p>
+      <p>RADAR F5 TECNOLOGIA &amp; NEGOCIOS DIGITAIS LTDA · CNPJ: 69.735.574/0001-04</p>
     </div>
 
     <section
@@ -43,7 +44,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <input
             type="text"
             id="nome"
-            name="nome"
+            name="nome" maxlength="120"
             required
             style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px;"
           />
@@ -60,7 +61,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <input
             type="email"
             id="email"
-            name="email"
+            name="email" maxlength="254"
             required
             style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px;"
           />
@@ -76,7 +77,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
           <textarea
             id="mensagem"
-            name="mensagem"
+            name="mensagem" maxlength="5000"
             rows="5"
             required
             style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 6px;"
@@ -91,6 +92,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
         </div>
 
+        <p>Os dados serão usados para responder à sua solicitação. Consulte nossa <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
         <div>
           <button type="submit" class="btn btn-primary">
             Enviar Mensagem

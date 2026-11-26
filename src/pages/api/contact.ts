@@ -3,7 +3,7 @@ import { Resend } from "resend";
 
 export const prerender = false;
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
+
 
 // Rate limiting simples em memória (por IP). Suficiente para coibir bots
 // básicos, mas não é garantido em ambientes serverless com múltiplas
@@ -105,9 +105,17 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
       );
     }
 
+    if (nome.length > 120 || email.length > 254 || mensagem.length > 5000 || /[\r\n]/.test(nome)) {
+      return new Response(JSON.stringify({ success: false, message: "Verifique o tamanho e o formato dos campos." }), { status: 400, headers: { "Content-Type": "application/json" } });
+    }
+    const key = import.meta.env.RESEND_API_KEY;
+    if (!key) {
+      return new Response(JSON.stringify({ success: false, message: "Formulário temporariamente indisponível. Utilize nosso e-mail de contato." }), { status: 503, headers: { "Content-Type": "application/json" } });
+    }
+    const resend = new Resend(key);
     const { error } = await resend.emails.send({
       from: "Radar F5 <contato@radarf5.com>",
-      to: ["radarf5main@gmail.com"],
+      to: [import.meta.env.CONTACT_TO_EMAIL || "contato@radarf5.com"],
       replyTo: email,
       subject: `Nova mensagem de contato - ${nome}`,
       text: `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`,

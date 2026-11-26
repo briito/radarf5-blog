@@ -1,48 +1,7 @@
-# Guia de conteúdo — Blog Radar F5
+# Guia editorial — Blog Radar F5
 
-Nicho: **IA e Redes Sociais para Pequenos Negócios**.
-Modelo: audiência + conteúdo + produtos digitais (Instagram → ManyChat → Blog → produtos → curso).
+Conteúdo exclusivamente sobre marketing de afiliados e produtos digitais. Categorias: Marketing de Afiliados; Ferramentas para Afiliados; Reviews e Comparativos.
 
-## Categorias (definidas em `src/lib/categories.ts`)
+Artigos em `src/content/articles/`, imagens em `public/images/`. Use o esquema de `src/content.config.ts`, slug único, descrição, datas reais e imagem existente. Identifique links de afiliados com `ctaType: afiliado` e avisos claros. Não invente testes, resultados, preços ou depoimentos.
 
-O campo `category` do frontmatter precisa ser exatamente um destes nomes
-(o build falha se for diferente):
-
-- Conteúdo com IA
-- Instagram e Redes Sociais
-- Atendimento e Vendas
-- Produtividade
-- Ferramentas e Prompts
-
-Cada categoria tem uma página própria em `/categorias/<slug>/`.
-
-## Frontmatter de um artigo
-
-```yaml
-title: ""
-slug: "tres-ou-quatro-palavras"      # só palavras-chave; slugs já divulgados não mudam
-description: ""                      # até ~160 caracteres
-pubDate: "AAAA-MM-DD"                # define a ordem de listagem
-updatedDate: "AAAA-MM-DD"            # obrigatório em artigos sobre ferramentas/preços
-category: "Conteúdo com IA"
-image: "/images/slug-1200x675.webp"  # 1200x675, .webp, em public/images/
-imageAlt: ""
-draft: false
-related: ["outro-slug"]              # links internos; se vazio, usa a mesma categoria
-# CTA (opcional): ver ADS-SETUP.md
-```
-
-## Estrutura recomendada do artigo
-
-Título claro → introdução (problema) → **resposta direta** → explicação →
-passo a passo → exemplos para pequenos negócios → ferramentas/recursos →
-**limitações** → conclusão → **próxima ação** (outro artigo, isca ou produto).
-
-## Checklist antes de publicar
-
-- Resolve um problema real do pequeno negócio e responde à intenção de busca?
-- Está claro para iniciante, com exemplos concretos?
-- Informações que mudam (preços, planos, regras) têm data e fonte?
-- Distingue fato, análise, experiência e opinião? Não apresenta teste isolado como verdade universal?
-- Tem limitações explícitas e próxima ação coerente?
-- Tem links internos (`related`) e possíveis desdobramentos (Reel, carrossel, Stories, isca)?
+O artigo pilar Hostinger será produzido posteriormente, com link de afiliado fornecido pelo responsável. A chamada reutilizável será ativada somente quando existir uma página publicada. Sem newsletter, comentários ou captação de leads nesta fase.

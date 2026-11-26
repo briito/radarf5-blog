@@ -11,16 +11,14 @@ const articles = (await getCollection("articles", ({ data }) => {
 
 <BaseLayout
     title="Artigos - Radar F5"
-    description="Guias, tutoriais e prompts de IA para pequenos negócios: conteúdo, Instagram, atendimento, vendas e produtividade, explicados de forma simples."
+    description="Aprenda sobre marketing de afiliados, conheça plataformas, estratégias de divulgação, ferramentas e análises de produtos digitais no Blog Radar F5."
 >
     <section class="container hero-section">
         <div class="callout-box">
             <h1>Artigos</h1>
 
             <p>
-                Guias práticos sobre IA e redes sociais para pequenos
-                negócios: conteúdo, Instagram, atendimento, vendas e
-                produtividade.
+                Guias sobre marketing de afiliados, ferramentas e análises de produtos digitais.
             </p>
         </div>
     </section>
@@ -33,8 +31,7 @@ const articles = (await getCollection("articles", ({ data }) => {
         {
             articles.length === 0 ? (
                 <p class="empty-state">
-                    Estamos preparando os primeiros conteúdos sobre IA e
-                    redes sociais para pequenos negócios. Volte em breve!
+                    Estamos preparando os primeiros conteúdos sobre marketing de afiliados. Volte em breve!
                 </p>
             ) : (
                 articles.map((article) => (

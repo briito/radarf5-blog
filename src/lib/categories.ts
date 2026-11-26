@@ -1,36 +1,8 @@
-// Categorias oficiais do Radar F5 (organizadas por problema do pequeno negócio).
-// O frontmatter dos artigos usa o campo `name` exatamente como escrito aqui.
+// Categorias oficiais do Blog Radar F5.
 export const CATEGORIES = [
-  {
-    slug: "conteudo-com-ia",
-    name: "Conteúdo com IA",
-    description:
-      "Como criar posts, textos, vídeos e ideias de conteúdo mais rápido usando inteligência artificial no seu pequeno negócio.",
-  },
-  {
-    slug: "instagram-redes-sociais",
-    name: "Instagram e Redes Sociais",
-    description:
-      "Presença digital, engajamento, Reels, calendário e organização das redes sociais do seu negócio, com apoio de IA.",
-  },
-  {
-    slug: "atendimento-vendas",
-    name: "Atendimento e Vendas",
-    description:
-      "Como usar IA e automação para responder clientes, manter relacionamento e vender com mais organização.",
-  },
-  {
-    slug: "produtividade",
-    name: "Produtividade",
-    description:
-      "Organização, planejamento e processos: como economizar tempo em tarefas repetitivas do dia a dia do negócio.",
-  },
-  {
-    slug: "ferramentas-prompts",
-    name: "Ferramentas e Prompts",
-    description:
-      "Comparativos, testes de ferramentas de IA e listas de prompts prontos para pequenos negócios.",
-  },
+  { slug: "marketing-de-afiliados", name: "Marketing de Afiliados", description: "Guias, plataformas de afiliados e estratégias de divulgação de produtos digitais." },
+  { slug: "ferramentas-para-afiliados", name: "Ferramentas para Afiliados", description: "Ferramentas digitais, hospedagem, criação de conteúdo e produtividade para afiliados." },
+  { slug: "reviews-e-comparativos", name: "Reviews e Comparativos", description: "Análises e comparações de produtos digitais, plataformas e serviços para decisões informadas." },
 ] as const;
 
 export type CategoryName = (typeof CATEGORIES)[number]["name"];

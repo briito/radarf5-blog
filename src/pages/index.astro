@@ -10,22 +10,19 @@ const articles = (await getCollection("articles", ({ data }) => {
 ---
 
 <BaseLayout
-  title="Radar F5 — IA e Redes Sociais para Pequenos Negócios"
-  description="Guias práticos, prompts e ferramentas de IA para pequenos negócios criarem conteúdo, usarem o Instagram e atenderem melhor, sem complicação."
+  title="Radar F5 | Marketing de Afiliados, Ferramentas e Reviews"
+  description="Aprenda sobre marketing de afiliados, conheça plataformas, estratégias de divulgação, ferramentas e análises de produtos digitais no Blog Radar F5."
 >
   <section class="container hero-section">
     <div class="callout-box">
-      <h1>IA e Redes Sociais para Pequenos Negócios</h1>
+      <h1>Marketing de Afiliados e Negócios Digitais</h1>
 
       <p>
         Bem-vindo(a) ao <strong>Radar F5</strong>.
       </p>
 
       <p>
-        Guias práticos, prompts e testes de ferramentas para você usar
-        inteligência artificial e redes sociais no seu negócio, mesmo sem
-        conhecimento técnico: criar conteúdo mais rápido, organizar o
-        Instagram, atender melhor e ganhar tempo.
+        Aprenda sobre marketing de afiliados, conheça as principais plataformas, descubra ferramentas e estratégias de divulgação e encontre análises de produtos digitais para tomar decisões mais informadas.
       </p>
     </div>
   </section>
@@ -38,8 +35,7 @@ const articles = (await getCollection("articles", ({ data }) => {
     {
       articles.length === 0 ? (
         <p class="empty-state">
-          Estamos preparando os primeiros conteúdos sobre IA e redes
-          sociais para pequenos negócios. Volte em breve!
+          Estamos preparando os primeiros conteúdos sobre marketing de afiliados. Volte em breve!
         </p>
       ) : (
         articles.map((article) => (

@@ -34,7 +34,7 @@ const articles = defineCollection({
     ctaUrl: z.string().url().optional(),
     ctaText: z.string().optional(),
     ctaButtonLabel: z.string().optional().default("Acessar"),
-    ctaType: z.enum(["isca", "produto", "afiliado"]).default("isca"),
+    ctaType: z.enum(["isca", "produto", "afiliado"]).default("afiliado"),
   }),
 });
 
